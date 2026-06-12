@@ -6,10 +6,8 @@
 
 - FastAPI
 - SQLite
-- обычные HTML, CSS и JavaScript
+- HTML, CSS и JavaScript
 - WebSocket
-
-React, Django и docker-compose не используются.
 
 ## Структура
 
@@ -31,10 +29,7 @@ tests/
 main.py
 Dockerfile
 pyproject.toml
-DEFENSE_REPORT.md
 ```
-
-`DEFENSE_REPORT.md` - краткий отчет для подготовки к защите: ручки, базы данных, сущности и ответы на частые вопросы.
 
 ## Страницы
 
@@ -81,18 +76,6 @@ pip install -e .
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-Откройте:
-
-```text
-http://localhost:8000
-```
-
-С телефона в той же Wi-Fi сети:
-
-```text
-http://IP_ВАШЕГО_НОУТБУКА:8000
-```
-
 ## Запуск через Docker
 
 PowerShell:
@@ -112,6 +95,5 @@ docker run --rm -p 8000:8000 -v "%cd%/video:/app/video" -v "%cd%/app.db:/app/app
 ## Тесты
 
 ```bash
-pip install -e ".[test]"
 pytest
 ```
