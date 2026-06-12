@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/catalog">Video Room</a>
+      <nav>
+        <a id="admin-link" class="hidden" href="/admin">Админка</a>
+        <button id="logout-button" class="secondary">Выйти</button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="hero-row">
+        <div>
+          <p class="muted">Пользователь: <span id="username"></span></p>
+          <h1>Каталог фильмов</h1>
+        </div>
+        <form id="join-form" class="join-box">
+          <input id="join-room-id" placeholder="ID комнаты" />
+          <input id="join-room-password" type="password" placeholder="Пароль" />
+          <button type="submit">Войти</button>
+        </form>
+      </section>
+
+      <section id="catalog" class="movie-grid"></section>
+      <p id="message" class="message"></p>
+    </main>
+
+    <dialog id="room-dialog">
+      <form id="create-room-form" method="dialog" class="dialog-form">
+        <h2 id="dialog-title">Создать комнату</h2>
+        <input id="selected-movie-id" type="hidden" />
+
+        <label>
+          Название комнаты
+          <input id="room-title" />
+        </label>
+
+        <label>
+          Пароль комнаты
+          <input id="room-password" type="password" />
+        </label>
+        <p id="room-dialog-message" class="message dialog-message"></p>
+
+        <label>
+          Свой ID комнаты, необязательно
+          <input id="custom-room-id" placeholder="например film-night" />
+        </label>
+
+        <div class="actions">
+          <button type="submit">Создать</button>
+          <button id="close-dialog-button" class="secondary" type="button">Отмена</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="/static/common.js"></script>
+    <script src="/static/catalog.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="auth-page">
+      <form id="auth-form" class="panel auth-card">
+        <h1>Совместный просмотр</h1>
+
+        <label>
+          Логин
+          <input id="username" autocomplete="username" />
+        </label>
+
+        <label>
+          Пароль
+          <input id="password" type="password" autocomplete="current-password" />
+        </label>
+
+        <div class="actions">
+          <button type="submit">Войти</button>
+          <button id="register-button" class="secondary" type="button">Регистрация</button>
+        </div>
+
+        <p id="message" class="message"></p>
+      </form>
+    </main>
+
+    <script src="/static/common.js"></script>
+    <script src="/static/login.js"></script>
+  </body>
+</html>

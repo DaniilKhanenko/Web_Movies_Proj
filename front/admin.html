@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админка</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/catalog">Video Room</a>
+      <nav>
+        <a href="/catalog">Каталог</a>
+        <button id="logout-button" class="secondary">Выйти</button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="panel">
+        <h1>Админка фильмов</h1>
+        <form id="upload-form" class="upload-form">
+          <label>
+            Название фильма
+            <input id="movie-title" name="title" placeholder="Можно оставить пустым" />
+          </label>
+
+          <label>
+            Файл
+            <input id="movie-file" name="file" type="file" accept="video/*" required />
+          </label>
+
+          <button type="submit">Загрузить</button>
+        </form>
+        <p id="message" class="message"></p>
+      </section>
+
+      <section>
+        <h2>Фильмы на сервере</h2>
+        <div id="movie-list" class="movie-list"></div>
+      </section>
+    </main>
+
+    <script src="/static/common.js"></script>
+    <script src="/static/admin.js"></script>
+  </body>
+</html>
